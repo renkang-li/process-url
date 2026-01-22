@@ -1,0 +1,391 @@
+{
+"select s.shop,s.id\nfrom spa s\nleft join token t on s.shop=t.shop\nwhere \n  (t.domain='www.shoplumaramagic.com' and s.pagePath='pages\/news-hydroxyapatite-toothpaste') or \n(t.domain='chicovel380.kingfish.chat' and s.pagePath='pages\/dan-gao-a') or \n(t.domain='chicovel380.kingfish.chat' and s.pagePath='pages\/xiu-gai-ming-cheng-ce-shi-yi-xia-2-2-2-2') or \n(t.domain='www.diversekind.com' and s.pagePath='pages\/landingpage-hydroxyapatite-toothpaste') or \n(t.domain='www.diversekind.com' and s.pagePath='pages\/news-hydroxyapatite-toothpaste') or \n(t.domain='www.havetruste.com' and s.pagePath='pages\/news-paper-love-3d-cherry-blossom-flower-bouquet') or \n(t.domain='www.havetruste.com' and s.pagePath='pages\/checkout-paper-love-3d-cherry-blossom-flower-bouquet') or \n(t.domain='www.spectacularing.com' and s.pagePath='pages\/news-dreamy-sparkle-dual-line-contour-pen') or \n(t.domain='www.spectacularing.com' and s.pagePath='pages\/news-mini-car-dent-repair-puller') or \n(t.domain='www.kindynature.com' and s.pagePath='pages\/news-the-2025-wwii-aircraft-advent-calendar-that-teaches-delights-and-inspires') or \n(t.domain='www.kindynature.com' and s.pagePath='pages\/news-hi-fi-sports-bluetooth-54-ear-hook-headphones-with-noise-cancelling') or \n(t.domain='www.shopeliseandco.com' and s.pagePath='pages\/landingpage-ruffle-v-neck-long-sleeve-blouse') or \n(t.domain='www.prosperitying.com' and s.pagePath='pages\/news-warm-thermal-gloves-for-cycling-running-and-driving') or \n(t.domain='www.icerostma.com' and s.pagePath='pages\/news-all-in-one-highlight-eyeshadow-blush-palette') or \n(t.domain='www.anspecial.com' and s.pagePath='pages\/news-automotive-weather-stripping-rubber-seal') or \n(t.domain='www.treadcrck.com' and s.pagePath='pages\/news-paper-love-3d-cherry-blossom-flower-bouquet') or \n(t.domain='www.similarbe.com' and s.pagePath='pages\/landingpage-ruffle-v-neck-long-sleeve-blouse') or \n(t.domain='www.messagenal.com' and s.pagePath='pages\/news-multifunction-pedal-resistance-band') or \n(t.domain='www.declareover.net' and s.pagePath='pages\/news-faucet-insulation-cover') or \n(t.domain='www.artliver.com' and s.pagePath='products\/remote-control-of-car-devices-for-anti-theft-safety-4-2') or \n(t.domain='disability57.kingfish.chat' and s.pagePath='pages\/xiu-gai-yi-xia-ce-shi-hou-duan-de-fu-wu-2-2') or \n(t.domain='www.crucialon.com' and s.pagePath='pages\/news-faucet-insulation-cover') or \n(t.domain='www.crucialon.com' and s.pagePath='pages\/news-drywall-expansion-anchors-high-strength-zinc-screws-kit-pack-of-100') or \n(t.domain='www.awaitlook.com' and s.pagePath='pages\/news-smart-ai-glasses') or \n(t.domain='www.awaitlook.com' and s.pagePath='pages\/landingpagethe-spring\/fall-easy-wear-one-v-neck-sweatshirt-stylish--cozy') or \n(t.domain='www.awaitlook.com' and s.pagePath='pages\/news-all-in-one-highlight-eyeshadow-blush-palette') or \n(t.domain='www.beforewith.com' and s.pagePath='pages\/news-upgraded-6-antennen-wifi-repeater-1200mbps-2') or \n(t.domain='www.excursifund.com' and s.pagePath='pages\/news-the-bionic-3d-neck-shoulder-massager') or \n(t.domain='www.fringeout.com' and s.pagePath='pages\/news-widerstands-boxband') or \n(t.domain='www.fringeout.com' and s.pagePath='pages\/news-edelstahl-kchenschneidebrett') or \n(t.domain='www.bootbenefit.com' and s.pagePath='pages\/landingpage-wireless-charging-rotating-car-mount') or \n(t.domain='www.bootbenefit.com' and s.pagePath='pages\/news-mini-screwdriver-set') or \n(t.domain='www.bootbenefit.com' and s.pagePath='pages\/news-high-efficiency-concentrated-cleansing-lotion-multi-purpose-formula') or \n(t.domain='www.bootbenefit.com' and s.pagePath='pages\/landingpage-led-note-board-with-colors') or \n(t.domain='www.allnumerous.com' and s.pagePath='pages\/news-3d-pop-up-valentines-day-anniversary-love-tree-greeting-card') or \n(t.domain='www.allnumerous.com' and s.pagePath='pages\/news-mini-envelopes-with-blank-cards') or \n(t.domain='www.intomostly.com' and s.pagePath='pages\/news-stainless-steel-fruit-corers') or \n(t.domain='www.intomostly.com' and s.pagePath='pages\/news-acrylic-sun-visor-photo-holder') or \n(t.domain='www.hassignment.com' and s.pagePath='pages\/news-mini-envelopes-with-blank-cards') or \n(t.domain='www.hassignment.com' and s.pagePath='pages\/checkout-mini-envelopes-with-blank-cards') or \n(t.domain='www.awaitlook.net' and s.pagePath='pages\/news-wireless-carplay-adapter-for-iphone-and-android') or \n(t.domain='www.availableu.com' and s.pagePath='pages\/news-stainless-steel-kitchen-cutting-board') or \n(t.domain='www.shopsolelie.com' and s.pagePath='pages\/news-faucet-insulation-cover') or \n(t.domain='www.shopsolelie.com' and s.pagePath='pages\/news-warm-thermal-gloves-for-cycling-running-and-driving') or \n(t.domain='www.holdpreserve.com' and s.pagePath='pages\/news-industrial-grade-8-in-1-wire-pliers-with-voltage-detection') or \n(t.domain='www.holdpreserve.com' and s.pagePath='pages\/stainless-steel-automatic-mousetrap') or \n(t.domain='www.perpetualing.com' and s.pagePath='pages\/news-windshield-repair-fluid') or \n(t.domain='www.perpetualing.com' and s.pagePath='pages\/checkout-windshield-repair-fluid') or \n(t.domain='www.continentau.com' and s.pagePath='pages\/checkout-240w-stand-data-cable') or \n(t.domain='www.ulminnovat.de' and s.pagePath='pages\/news-elektrischer-fusselentferner-wiederaufladbar') or \n(t.domain='www.rectionrae.com' and s.pagePath='pages\/news-multi-purpose-drain-cleaner') or \n(t.domain='www.petitionm.com' and s.pagePath='pages\/news-puppy-yeast-relief-agent') or \n(t.domain='www.innumerableable.com' and s.pagePath='pages\/checkout-orange-hide-and-seek-plush-dog-toy') or \n(t.domain='www.innumerableable.com' and s.pagePath='pages\/news-orange-hide-and-seek-plush-dog-toyn') or \n(t.domain='www.observet.com' and s.pagePath='pages\/news-g-shaped-led-wireless-charging-speaker') or \n(t.domain='www.descendank.com' and s.pagePath='pages\/news-universal-battery-disconnect-leak-protector') or \n(t.domain='rougheiu474.exooolj.email' and s.pagePath='pages\/landing-stay-real') or \n(t.domain='rougheiu474.exooolj.email' and s.pagePath='pages\/news-stay-real') or \n(t.domain='www.secentak.de' and s.pagePath='pages\/news-fahrrad-handschuhe-mit-anti-rutsch-funktion-fr-touchscreens') or \n(t.domain='www.pogictive.com' and s.pagePath='pages\/news-suction-cup-hooks') or \n(t.domain='www.ritualty.com' and s.pagePath='pages\/news-warm-thermal-gloves-for-cycling-running-and-driving') or \n(t.domain='www.descorative.com' and s.pagePath='pages\/news-punch-free-baseball-cap-storage-rack') or \n(t.domain='www.matchequaly.com' and s.pagePath='pages\/news-wireless-charging-rotating-car-mount') or \n(t.domain='www.matchequaly.com' and s.pagePath='pages\/news-led-note-board-with-colors') or \n(t.domain='www.respondcome.com' and s.pagePath='pages\/news-ergonomic-travel-pillow') or \n(t.domain='www.levelarank.com' and s.pagePath='pages\/news-electric-wine-decanter') or \n(t.domain='www.safedprovide.com' and s.pagePath='pages\/news-faucet-insulation-cover') or \n(t.domain='www.safedprovide.com' and s.pagePath='pages\/checkout-drywall-expansion-anchors-high-strength-zinc-screws-kit-pack-of-100') or \n(t.domain='www.safedprovide.com' and s.pagePath='pages\/news-drywall-expansion-anchors-high-strength-zinc-screws-kit-pack-of-100') or \n(t.domain='www.safedprovide.com' and s.pagePath='pages\/news-creative-mini-gym-barbell-plate-keychain') or \n(t.domain='www.zealburst.com' and s.pagePath='pages\/news-ergonomic-travel-pillow') or \n(t.domain='www.commodityes.com' and s.pagePath='pages\/news-solar-led-candle-goblet-light-for-outdoor-waterproof-use') or \n(t.domain='www.appreciateto.com' and s.pagePath='pages\/news-all-in-one-highlight-eyeshadow-blush-palette-1') or \n(t.domain='www.acourtchase.net' and s.pagePath='pages\/news-reusable-chenille-microfiber-dust-duster') or \n(t.domain='www.explanationi.com' and s.pagePath='pages\/news-fruit-juice-squeezer') or \n(t.domain='www.adviseurge.com' and s.pagePath='pages\/landingpage-smart-2k-window-security-camera') or \n(t.domain='www.extendlongs.com' and s.pagePath='pages\/checkout-the-2025-wwii-aircraft-advent-calendar-that-teaches-delights-and-inspires') or \n(t.domain='www.extendlongs.com' and s.pagePath='pages\/news-the-2025-wwii-aircraft-advent-calendar-that-teaches-delights-and-inspires') or \n(t.domain='www.stadardize.com' and s.pagePath='pages\/news-g-shaped-led-wireless-charging-speaker') or \n(t.domain='www.luxourious.com' and s.pagePath='pages\/landingpage-math-flash-cards-pop-fidget-chart') or \n(t.domain='www.symmetryup.com' and s.pagePath='pages\/news-maifan-stone-multi-hole-egg-frying-pan') or \n(t.domain='www.upperimost.com' and s.pagePath='pages\/news-automotive-weather-stripping-rubber-seal') or \n(t.domain='www.describego.com' and s.pagePath='pages\/news-electric-wine-decanter') or \n(t.domain='www.belumera.com' and s.pagePath='pages\/news-color-by-number-coloring-book-for-adults') or \n(t.domain='www.controlbridle.com' and s.pagePath='pages\/news-tire-repair-rubber-nail') or \n(t.domain='www.controlbridle.com' and s.pagePath='pages\/landingpage-tire-repair-rubber-nail') or \n(t.domain='www.cheerpathm.com' and s.pagePath='pages\/news-drywall-expansion-anchors-high-strength-zinc-screws-kit-pack-of-100') or \n(t.domain='www.shopxarch.com' and s.pagePath='pages\/news-cute-cow-slipper-socks') or \n(t.domain='www.insipiddull.net' and s.pagePath='pages\/checkout-humorous-metal-sign') or \n(t.domain='www.inasmucha.com' and s.pagePath='pages\/news-industrial-grade-8-in-1-wire-pliers-with-voltage-detection') or \n(t.domain='www.shinejoyat.com' and s.pagePath='pages\/news-automotive-glass-cleaning-and-defogging-brush') or \n(t.domain='www.saarbrucke.de' and s.pagePath='pages\/news-verstellbare-fhrungsschiene-fr-schneidemaschinen') or \n(t.domain='www.shophairix.com' and s.pagePath='pages\/news-electric-intimate-hair-trimmer') or \n(t.domain='www.hencethus.com' and s.pagePath='pages\/landingpage-wool-felt-flap-polishing-disc') or \n(t.domain='www.product-likes.de' and s.pagePath='pages\/news-2-in-1-farbwechsel-foundation-stick') or \n(t.domain='www.expanlarge.com' and s.pagePath='pages\/news-golf-club-and-golf-ball-cleaning-bag') or \n(t.domain='www.arousebell.com' and s.pagePath='pages\/news-crab-weightlifting-pen-holder') or \n(t.domain='www.emboadlie.com' and s.pagePath='pages\/news-creative-mini-gym-barbell-plate-keychain') or \n(t.domain='www.especialbest.com' and s.pagePath='pages\/news-g-shaped-led-wireless-charging-speaker') or \n(t.domain='www.shopwearglossy.com' and s.pagePath='pages\/news-smart-body-fat-scale')": [
+	{
+		"shop" : "akogqyf88.hotishop.com",
+		"id" : 147010
+	},
+	{
+		"shop" : "chicovel380.zenshopin.com",
+		"id" : 147035
+	},
+	{
+		"shop" : "chicovel380.zenshopin.com",
+		"id" : 146964
+	},
+	{
+		"shop" : "ugfiqqym490.zenshopin.com",
+		"id" : 146980
+	},
+	{
+		"shop" : "pdpiuoiy367.zenshopin.com",
+		"id" : 146982
+	},
+	{
+		"shop" : "lrkdeppp092.zenshopin.com",
+		"id" : 146988
+	},
+	{
+		"shop" : "jleisltw578.zenshopin.com",
+		"id" : 146917
+	},
+	{
+		"shop" : "sttbbfkn046.zenshopin.com",
+		"id" : 15846
+	},
+	{
+		"shop" : "sttbbfkn046.zenshopin.com",
+		"id" : 40946
+	},
+	{
+		"shop" : "exfoukti548.zenshopin.com",
+		"id" : 146974
+	},
+	{
+		"shop" : "exfoukti548.zenshopin.com",
+		"id" : 146978
+	},
+	{
+		"shop" : "llmdeygb382.zenshopin.com",
+		"id" : 143887
+	},
+	{
+		"shop" : "llmdeygb382.zenshopin.com",
+		"id" : 147028
+	},
+	{
+		"shop" : "kkcxfeki574.zenshopin.com",
+		"id" : 147026
+	},
+	{
+		"shop" : "btgzuctl987.zenshopin.com",
+		"id" : 14320
+	},
+	{
+		"shop" : "btgzuctl987.zenshopin.com",
+		"id" : 16440
+	},
+	{
+		"shop" : "btgzuctl987.zenshopin.com",
+		"id" : 22645
+	},
+	{
+		"shop" : "btgzuctl987.zenshopin.com",
+		"id" : 26100
+	},
+	{
+		"shop" : "lcwchwle807.zenshopin.com",
+		"id" : 97704
+	},
+	{
+		"shop" : "lcwchwle807.zenshopin.com",
+		"id" : 147030
+	},
+	{
+		"shop" : "ttshhpye299.zenshopin.com",
+		"id" : 16458
+	},
+	{
+		"shop" : "ttshhpye299.zenshopin.com",
+		"id" : 21517
+	},
+	{
+		"shop" : "ttshhpye299.zenshopin.com",
+		"id" : 62290
+	},
+	{
+		"shop" : "glodjouu144.zenshopin.com",
+		"id" : 22676
+	},
+	{
+		"shop" : "zlchhheg632.zenshopin.com",
+		"id" : 7290
+	},
+	{
+		"shop" : "zlchhheg632.zenshopin.com",
+		"id" : 24329
+	},
+	{
+		"shop" : "yfbxaick060.zenshopin.com",
+		"id" : 144362
+	},
+	{
+		"shop" : "fwulttjd369.zenshopin.com",
+		"id" : 18479
+	},
+	{
+		"shop" : "fwulttjd369.zenshopin.com",
+		"id" : 18480
+	},
+	{
+		"shop" : "uihqlsyl095.zenshopin.com",
+		"id" : 144376
+	},
+	{
+		"shop" : "uedtbxes052.zenshopin.com",
+		"id" : 14771
+	},
+	{
+		"shop" : "uedtbxes052.zenshopin.com",
+		"id" : 125504
+	},
+	{
+		"shop" : "oghgyyta232.zenshopin.com",
+		"id" : 16498
+	},
+	{
+		"shop" : "oghgyyta232.zenshopin.com",
+		"id" : 16499
+	},
+	{
+		"shop" : "proovmsm732.zenshopin.com",
+		"id" : 122987
+	},
+	{
+		"shop" : "lmqiznyw981.zenshopin.com",
+		"id" : 125625
+	},
+	{
+		"shop" : "fooijrat295.zenshopin.com",
+		"id" : 147102
+	},
+	{
+		"shop" : "rvtemjig308.zenshopin.com",
+		"id" : 146933
+	},
+	{
+		"shop" : "rvtemjig308.zenshopin.com",
+		"id" : 146935
+	},
+	{
+		"shop" : "uoqaiywx684.zenshopin.com",
+		"id" : 146931
+	},
+	{
+		"shop" : "fdinojkr334.zenshopin.com",
+		"id" : 146919
+	},
+	{
+		"shop" : "fdinojkr334.zenshopin.com",
+		"id" : 146927
+	},
+	{
+		"shop" : "fdinojkr334.zenshopin.com",
+		"id" : 146928
+	},
+	{
+		"shop" : "fdinojkr334.zenshopin.com",
+		"id" : 146925
+	},
+	{
+		"shop" : "hbqtxrrp556.zenshopin.com",
+		"id" : 146943
+	},
+	{
+		"shop" : "tfohbehc488.zenshopin.com",
+		"id" : 146949
+	},
+	{
+		"shop" : "ltmynxtg66.hotishop.com",
+		"id" : 146996
+	},
+	{
+		"shop" : "lkrlygmt62.hotishop.com",
+		"id" : 147019
+	},
+	{
+		"shop" : "bgkkptubw10.hotishop.com",
+		"id" : 147008
+	},
+	{
+		"shop" : "bgkkptubw10.hotishop.com",
+		"id" : 147009
+	},
+	{
+		"shop" : "dfgvecv67.hotishop.com",
+		"id" : 147013
+	},
+	{
+		"shop" : "rmpdmyo21.hotishop.com",
+		"id" : 28100
+	},
+	{
+		"shop" : "blejopgqa55.hotishop.com",
+		"id" : 135755
+	},
+	{
+		"shop" : "qewpfmm88.hotishop.com",
+		"id" : 147014
+	},
+	{
+		"shop" : "dwjngvxrc33.hotishop.com",
+		"id" : 147075
+	},
+	{
+		"shop" : "wwukwhi74.hotishop.com",
+		"id" : 79107
+	},
+	{
+		"shop" : "nkbkyuu36.hotishop.com",
+		"id" : 146990
+	},
+	{
+		"shop" : "fwjhhfau89.wshopon.com",
+		"id" : 146994
+	},
+	{
+		"shop" : "tnkyamly37.hotishop.com",
+		"id" : 147024
+	},
+	{
+		"shop" : "rsswugpt88.hotishop.com",
+		"id" : 124807
+	},
+	{
+		"shop" : "rsswugpt88.hotishop.com",
+		"id" : 146152
+	},
+	{
+		"shop" : "kehvvbtq38.hotishop.com",
+		"id" : 146215
+	},
+	{
+		"shop" : "rwmjmruh74.hotishop.com",
+		"id" : 146247
+	},
+	{
+		"shop" : "cjqnjhw29.hotishop.com",
+		"id" : 146355
+	},
+	{
+		"shop" : "rlgvqbdd70.hotishop.com",
+		"id" : 129792
+	},
+	{
+		"shop" : "qklsbocv69.hotishop.com",
+		"id" : 146957
+	},
+	{
+		"shop" : "bdmpxkkii44.hotishop.com",
+		"id" : 123878
+	},
+	{
+		"shop" : "aovtzusxr39.hotishop.com",
+		"id" : 145831
+	},
+	{
+		"shop" : "mxmpvxmim77.hotishop.com",
+		"id" : 145822
+	},
+	{
+		"shop" : "tqhwsldfm37.hotishop.com",
+		"id" : 146206
+	},
+	{
+		"shop" : "zmvpscoom31.hotishop.com",
+		"id" : 124160
+	},
+	{
+		"shop" : "fwjtnhl21.hotishop.com",
+		"id" : 144624
+	},
+	{
+		"shop" : "ceukudk75.hotishop.com",
+		"id" : 145840
+	},
+	{
+		"shop" : "tvfcgnsh11.hotishop.com",
+		"id" : 146716
+	},
+	{
+		"shop" : "kwbfwtmw68.hotishop.com",
+		"id" : 124923
+	},
+	{
+		"shop" : "moxiqfvs96.hotishop.com",
+		"id" : 144632
+	},
+	{
+		"shop" : "moxiqfvs96.hotishop.com",
+		"id" : 144633
+	},
+	{
+		"shop" : "vhyknqpw96.hotishop.com",
+		"id" : 146202
+	},
+	{
+		"shop" : "vhyknqpw96.hotishop.com",
+		"id" : 146203
+	},
+	{
+		"shop" : "dnsyxtji58.hotishop.com",
+		"id" : 147021
+	},
+	{
+		"shop" : "dnsyxtji58.hotishop.com",
+		"id" : 147022
+	},
+	{
+		"shop" : "nxspbopt07.hotishop.com",
+		"id" : 144660
+	},
+	{
+		"shop" : "opnihksv32.hotishop.com",
+		"id" : 147016
+	},
+	{
+		"shop" : "viraqepy98.hotishop.com",
+		"id" : 146525
+	},
+	{
+		"shop" : "yjdecppc22.hotishop.com",
+		"id" : 146198
+	},
+	{
+		"shop" : "yjdecppc22.hotishop.com",
+		"id" : 146224
+	},
+	{
+		"shop" : "tqhybfuf35.hotishop.com",
+		"id" : 145149
+	},
+	{
+		"shop" : "iwkdkgss11.hotishop.com",
+		"id" : 146111
+	},
+	{
+		"shop" : "iwkdkgss11.hotishop.com",
+		"id" : 146112
+	},
+	{
+		"shop" : "eyuhtbdu29.hotishop.com",
+		"id" : 146368
+	},
+	{
+		"shop" : "tioulnk02.hotishop.com",
+		"id" : 146992
+	},
+	{
+		"shop" : "ntxoixp56.hotishop.com",
+		"id" : 137930
+	},
+	{
+		"shop" : "cyskedjli69.hotishop.com",
+		"id" : 135507
+	},
+	{
+		"shop" : "lxjgqvi29.hotishop.com",
+		"id" : 146386
+	},
+	{
+		"shop" : "whzrbwo07.hotishop.com",
+		"id" : 146325
+	},
+	{
+		"shop" : "fitnoex21.shopnova.top",
+		"id" : 55114
+	},
+	{
+		"shop" : "champ3.wshopon.com",
+		"id" : 143029
+	}
+]}
