@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日志处理工具</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+    .step {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 6px;
+      border-left: 4px solid #4CAF50;
+    }
+    .step h2 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .step-number {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: #4CAF50;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .output {
+      background: #f0f0f0;
+      padding: 12px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .success {
+      color: #4CAF50;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .error {
+      color: #f44336;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .info {
+      background: #e3f2fd;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      color: #1976d2;
+      font-size: 14px;
+    }
+    .download-btn {
+      background: #2196F3;
+      margin-left: 10px;
+    }
+    .download-btn:hover {
+      background: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ 日志处理工具</h1>
+
+    <!-- 步骤 1 -->
+    <div class="step">
+      <h2><span class="step-number">1</span>转换日志为分组格式</h2>
+      <div class="info">粘贴 NDJSON 格式的日志（每行一个 JSON 对象）</div>
+      <textarea id="input1" placeholder='{"CleanReferer":"https://www.example.com/pages/product"}
+{"CleanReferer":"https://www.example.com/pages/about"}'></textarea>
+      <button onclick="convertLog()">转换</button>
+      <div id="result1"></div>
+    </div>
+
+    <!-- 步骤 2 -->
+    <div class="step">
+      <h2><span class="step-number">2</span>生成 SQL 查询条件</h2>
+      <div class="info">使用步骤 1 的输出，或粘贴分组后的 JSON</div>
+      <textarea id="input2" placeholder='[{"domain":"www.example.com","paths":["pages/product"]}]'></textarea>
+      <button onclick="generateSql()">生成 SQL</button>
+      <button class="download-btn" onclick="downloadText('sql-conditions.txt', document.getElementById('output2').textContent)">下载</button>
+      <div id="result2"></div>
+      <div id="output2" class="output" style="display:none;"></div>
+    </div>
+
+    <!-- 步骤 3 -->
+    <div class="step">
+      <h2><span class="step-number">3</span>执行 SQL 查询</h2>
+      <div class="info">
+        将步骤 2 生成的 SQL 条件复制到数据库查询中：<br>
+        <code style="background:#fff;padding:4px 8px;border-radius:3px;display:inline-block;margin-top:5px;">
+          SELECT s.shop, s.id FROM spa s LEFT JOIN token t ON s.shop=t.shop WHERE [粘贴条件]
+        </code>
+      </div>
+    </div>
+
+    <!-- 步骤 4 -->
+    <div class="step">
+      <h2><span class="step-number">4</span>生成批量发布命令</h2>
+      <div class="info">粘贴 SQL 查询结果的 JSON</div>
+      <textarea id="input4" placeholder='{"select ...": [{"shop":"example.com","id":123}]}'></textarea>
+      <button onclick="generateCommands()">生成命令</button>
+      <button class="download-btn" onclick="downloadText('publish-commands.sh', document.getElementById('output4').textContent)">下载</button>
+      <div id="result4"></div>
+      <div id="output4" class="output" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script>
+    function convertLog() {
+      const input = document.getElementById('input1').value.trim();
+      const result = document.getElementById('result1');
+      
+      if (!input) {
+        result.innerHTML = '<div class="error">请输入日志数据</div>';
+        return;
+      }
+
+      try {
+        const lines = input.split('\n').filter(l => l.trim());
+        const data = lines.map(line => JSON.parse(line));
+        
+        const grouped = {};
+        data.forEach(item => {
+          try {
+            const url = new URL(item.CleanReferer);
+            const domain = url.hostname;
+            const path = url.pathname.substring(1);
+
+            if (!grouped[domain]) {
+              grouped[domain] = [];
+            }
+
+            if (path && !grouped[domain].includes(path)) {
+              grouped[domain].push(path);
+            }
+          } catch (e) {
+            console.error('解析失败:', item.CleanReferer);
+          }
+        });
+
+        const output = Object.keys(grouped).map(domain => ({
+          domain,
+          paths: grouped[domain]
+        }));
+
+        const json = JSON.stringify(output, null, 2);
+        document.getElementById('input2').value = json;
+        
+        result.innerHTML = `<div class="success">✓ 转换完成！共 ${output.length} 个域名</div>`;
+      } catch (error) {
+        result.innerHTML = `<div class="error">✗ 错误: ${error.message}</div>`;
+      }
+    }
+
+    function generateSql() {
+      const input = document.getElementById('input2').value.trim();
+      const result = document.getElementById('result2');
+      const output = document.getElementById('output2');
+      
+      if (!input) {
+        result.innerHTML = '<div class="error">请输入分组数据</div>';
+        return;
+      }
+
+      try {
+        const data = JSON.parse(input);
+        const conditions = [];
+
+        data.forEach(item => {
+          const domain = item.domain;
+          item.paths.forEach(path => {
+            conditions.push(`(t.domain='${domain}' and s.pagePath='${path}')`);
+          });
+        });
+
+        const sqlCondition = conditions.join(' or \n');
+        output.textContent = sqlCondition;
+        output.style.display = 'block';
+        
+        result.innerHTML = `<div class="success">✓ 生成完成！共 ${conditions.length} 个条件</div>`;
+      } catch (error) {
+        result.innerHTML = `<div class="error">✗ 错误: ${error.message}</div>`;
+      }
+    }
+
+    function generateCommands() {
+      const input = document.getElementById('input4').value.trim();
+      const result = document.getElementById('result4');
+      const output = document.getElementById('output4');
+      
+      if (!input) {
+        result.innerHTML = '<div class="error">请输入 SQL 查询结果</div>';
+        return;
+      }
+
+      try {
+        const jsonData = JSON.parse(input);
+        const data = Object.values(jsonData)[0];
+        const grouped = {};
+
+        data.forEach(item => {
+          const shop = item.shop;
+          const id = item.id;
+          
+          if (!grouped[shop]) {
+            grouped[shop] = [];
+          }
+          
+          grouped[shop].push(id);
+        });
+
+        const commands = [];
+        Object.keys(grouped).forEach(shop => {
+          const spaIds = grouped[shop].join(',');
+          const command = `npx ts-node ./cmd/publish-spa.ts --cmd=publishShopSpa --shop=${shop} --spaIds="${spaIds}" --yes=1`;
+          commands.push(command);
+        });
+
+        const shellScript = commands.join(' && \\\n');
+        output.textContent = shellScript;
+        output.style.display = 'block';
+        
+        result.innerHTML = `<div class="success">✓ 生成完成！共 ${commands.length} 个 shop</div>`;
+      } catch (error) {
+        result.innerHTML = `<div class="error">✗ 错误: ${error.message}</div>`;
+      }
+    }
+
+    function downloadText(filename, text) {
+      if (!text) {
+        alert('没有可下载的内容');
+        return;
+      }
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
